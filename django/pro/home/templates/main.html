@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>HomePage</title>
+</head>
+<body>
+    
+</div  class="main-content">
+<h2>메인 페이지</h2>
+
+    <h4>오늘은 {{todate|date:"Y년 Md일 D"}} 입니다!</h4>
+    <hr> <!-- 구분선 추가 -->
+    <h3>오늘 우리 가족은 ___ 했다.</h3>
+    
+    <div class="container">
+        <div class="box b1" contenteditable="true"></div>
+        <div class="box b2" contenteditable="true"></div>
+        <div class="box b3" contenteditable="true"></div>
+        <div class="box b4" contenteditable="true"></div>
+    </div>
+<div>
+
+    
+<ul>
+    <a href="/admin"><li>관리자</li></a>
+</ul>
+    
+</body>
+</html>

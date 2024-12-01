@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* 모든 요소를 수평 중앙 정렬 */
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden; /* 화면을 넘지 않도록 설정 */
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 설정 */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* 콘텐츠가 넘칠 때 보이지 않도록 설정 */
+}
+
+h2 {
+  margin-top: 10;
+  margin-bottom: 50px;
+  font-size: 2em;
+  color: #333;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #666;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+/* 박스들 스타일 */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);  /* 두 개의 열로 구성 */
+  grid-template-rows: repeat(2, 200px);  /* 두 개의 행 */
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+  overflow: hidden; /* 화면을 넘지 않도록 설정 */
+}
+
+/* 개별 박스 스타일 */
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;  /* 박스 내용이 넘치지 않도록 처리 */
+  text-align: center;
+  background-color: #ccc;
+}
+
+.b1{background-color: pink;}
+.b2{background-color: lightblue;}
+.b3{background-color: rgb(204, 248, 204);}
+.b4{background-color: lemonchiffon;}
+
+/* 구분선 스타일 */
+hr {
+  border: 0;
+  border-top: 2px solid #ccc;  /* 상단에 2px 두께의 구분선 */
+  margin: 20px 0;  /* 위, 아래 마진 설정 */
+  width: 80%;  /* 구분선의 너비 설정 */
+  margin-left: auto;  /* 가운데 정렬 */
+  margin-right: auto; /* 가운데 정렬 */
+}
+
+/* 관리자 링크 스타일 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  background-color: #ddd;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #ccc;
+}
+
+/* 반응형 디자인: 화면 크기가 줄어들 때 레이아웃 조정 */
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;  /* 한 열로 표시 */
+      grid-template-rows: repeat(4, 200px); /* 박스를 세로로 쌓기 */
+  }
+
+  h2 {
+      font-size: 1.8em;  /* 제목 크기 조정 */
+  }
+
+  h4 {
+      font-size: 1.3em;  /* 날짜 크기 조정 */
+  }
+
+  h3 {
+      font-size: 1.6em;  /* "오늘 우리 가족은" 크기 조정 */
+  }
+
+  .box {
+      max-width: 90%;  /* 박스 크기 조정 */
+      height: auto;  /* 박스 크기 비율 유지 */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.5em;  /* 제목 크기 더 작게 */
+  }
+
+  h4 {
+      font-size: 1.1em;  /* 날짜 크기 더 작게 */
+  }
+
+  h3 {
+      font-size: 1.4em;  /* "오늘 우리 가족은" 크기 더 작게 */
+  }
+
+  .container {
+      grid-template-columns: 1fr;  /* 한 열로 표시 */
+      grid-template-rows: repeat(4, 180px); /* 박스 크기 더 작은 세로로 쌓기 */
+  }
+
+  .box {
+      max-width: 90%;  /* 박스 크기 유지 */
+      height: auto;  /* 박스 크기 비율 유지 */
+  }
+}
